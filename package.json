@@ -1,0 +1,31 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A Simple Employee Profile Generator",
+  "main": "Index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ns8279/Team-Profile-Generator.git"
+  },
+  "keywords": [
+    "NA"
+  ],
+  "author": "Nirupama Sundararaman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ns8279/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/ns8279/Team-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  },
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
+}

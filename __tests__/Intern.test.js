@@ -14,3 +14,12 @@ test('Can get role via the getRole',() => {
     
     expect(intern.getRole()).toEqual("Intern");
 });
+
+/*
+Test to check the school method of the Intern class
+*/ 
+test('Can get school name via a method',() => {
+    const intern = new Intern('Alex', 4007, 'alex@g.com', 'RIT');
+
+    expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school.toString()));   
+});

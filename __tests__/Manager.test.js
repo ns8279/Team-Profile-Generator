@@ -1,6 +1,6 @@
-const Manager = require ('../lib/Manager.js'); // requires the manager.js file to pass the test
+const Manager = require ('../lib/Manager.js'); // requires the Manager.js file to pass the test
 
-test('create an manager object', () => {
+test('create a manager object', () => {
     const manager = new Manager('Alex', 4007, 'alex@g.com', 23);
 
     // expect(manager.name).toEqual(expect.any(String));

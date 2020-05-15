@@ -22,9 +22,9 @@ test('Can get name via the getName method', ()=>{
 Test to check the get id method
 */
 test('Can get name via the getid method', ()=>{
-    const employee = new Employee('Alex', '4007', 'alex@g.com');
+    const employee = new Employee('Alex', 4007, 'alex@g.com');
     
-    expect(employee.getId()).toEqual(expect.stringContaining(employee.Id.toString()));
+    expect(employee.getId()).toEqual(expect.any(Number));
 });
 
 /*

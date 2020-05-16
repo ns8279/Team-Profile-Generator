@@ -93,6 +93,15 @@ function addMember() {
                 type: "input",
                 name: "infoRole",
                 message: `Enter the team member's ${infoRole}`,
+                // validate: function validate(infoRole) {
+                //     if(infoRole === "office Phone Number"){
+                //         var re = /^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4}/;
+                //         return re.test(phoneNumber);
+                //     }else {
+                //         return this.type;
+                //     }
+                    
+                // }
             },
 
             {
@@ -142,7 +151,7 @@ function startHTML() {
                 <title>Team Profile</title>
             </head>
             <body>
-                <nav class="navbar mb-5 text-white" style = "background-color: palevioletred; height: 15rem;">
+                <nav class="navbar mb-5 text-white" style = "background-color: palevioletred; height: 10rem;">
                     <span class="navbar-brand mb-0 h1 w-100 text-center">Team Profile</span>
                 </nav>
                 <div class="container">
@@ -170,7 +179,7 @@ function addHTML(member) {
         if (role === "Engineer") {
             const github = member.getGithubUserName();
             data = `<div class="col-4">
-            <div class="card mx-auto mb-3" style="width: 18rem">
+            <div class="card mx-auto mb-3" style="width: 20rem">
             <h5 class="card-header bg-primary text-white">${name}<br /><br />Engineer ✍ <i class="fas fa-user-graduate"></i></h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
@@ -182,7 +191,7 @@ function addHTML(member) {
         } else if (role === "Intern") {
             const school = member.getSchool();
             data = `<div class="col-4">
-            <div class="card mx-auto mb-3" style="width: 18rem">
+            <div class="card mx-auto mb-3" style="width: 20rem">
             <h5 class="card-header bg-primary text-white">${name}<br /><br />Intern 📚 <i class="fas fa-glasses"></i></h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
@@ -194,7 +203,7 @@ function addHTML(member) {
         } else {
             const officeNumber = member.officeNumber;
             data = `<div class="col-4">
-            <div class="card mx-auto mb-3" style="width: 18rem">
+            <div class="card mx-auto mb-3" style="width: 20rem">
             <h5 class="card-header bg-primary text-white">${name}<br /><br />Manager ☕ </h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>

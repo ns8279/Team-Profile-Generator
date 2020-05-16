@@ -2,10 +2,6 @@ const Manager = require ('../lib/Manager.js'); // requires the Manager.js file t
 
 test('create a manager object', () => {
     const manager = new Manager('Alex', 4007, 'alex@g.com', 23);
-
-    // expect(manager.name).toEqual(expect.any(String));
-    // expect(manager.Id).toEqual(expect.any(Number));
-    // expect(manager.email).toEqual(expect.any(String));
     expect(manager.officeNumber).toEqual(expect.any(Number));
 });
 

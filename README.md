@@ -28,7 +28,10 @@
   ## Tests
       Running tests using Jest framework.
    The Walkthrough Video of how to test the app is as follows:
+   </br>
   [Team Profile Generator](https://drive.google.com/file/d/1xlQccbDAbg3BPCE0A85colfLdp6p2yJF/view) 
+  </br>
+  [Passing the Tests using Jest](https://drive.google.com/file/d/1COZv6sFkN25dNS-mdvS_jKfV86YMLIrC/view) 
 
 
   ## Preview

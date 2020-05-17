@@ -162,7 +162,7 @@ function startHTML() {
 */
 function addHTML(member) {
     return new Promise(function(resolve, reject) {
-        const name = member.getName();
+        const name = member.getName();  
         const role = member.getRole();
         const id = member.getId();
         const email = member.getEmail();

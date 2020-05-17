@@ -50,7 +50,7 @@ function addMember() {
             type: "input",
             name: "id",
             message: "Please enter the Employee ID",
-            validate: function ValidateId(id) {  //This will validate if the entered input value is number or not
+            validate: function ValidateId(id) {  //This will validate if the entered input value is number 
                 var regex = /^\d+$/;
                 return regex.test(id) || "ID should be number only.";
             }
@@ -74,9 +74,9 @@ function addMember() {
 
         /*  
             -to check if the appropriate role information is collected from the user
-            -If its an Engineer the Github username,
-            -If its an Intern the School Name
-            -If its a Manager the Office Number
+            -If its an Engineer the Github username should be the input 
+            -If its an Intern the School Name should be the input 
+            -If its a Manager the Office Number should be the input 
         */
         if(role === "Engineer"){
             infoRole = "Github Username";
@@ -87,21 +87,11 @@ function addMember() {
         else {
             infoRole = "Office Phone Number";
         }
-
         inquirer.prompt([
             {
                 type: "input",
-                name: "infoRole",
-                message: `Enter the team member's ${infoRole}`,
-                // validate: function validate(infoRole) {
-                //     if(infoRole === "office Phone Number"){
-                //         var re = /^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4}/;
-                //         return re.test(phoneNumber);
-                //     }else {
-                //         return this.type;
-                //     }
-                    
-                // }
+                name: "infoRole", 
+                message: `Enter the team member's ${infoRole}`
             },
 
             {
@@ -124,6 +114,7 @@ function addMember() {
             }
             else {
                 newMember = new Manager(name, id, email, infoRole); //The "new" creates a new object of Manager Class
+                
             }
             employee.push(newMember);
             addHTML(newMember);
@@ -132,7 +123,7 @@ function addMember() {
                 addMember();
             }else {
                 finishHTML();
-                console.log("Your Profile is Team Generated")
+                console.log("Your Team's Profile is generated! Check out the HTML page to view it in a Web-Browser")
             }
         });
     }); 
@@ -162,11 +153,11 @@ function startHTML() {
                 console.log(err);
             }
         });
-        console.log("Time to start your Team Profile Data"); 
+        console.log("Time to start your Team's Profile Data"); 
 }
 
 /*
-    This function is used to write the new member data evertime the user enters the data. 
+    This function is used to write the new member data everytime the user enters the information of an employee
     This function will also be called at the start of the application
 */
 function addHTML(member) {
@@ -180,7 +171,7 @@ function addHTML(member) {
             const github = member.getGithubUserName();
             data = `<div class="col-4">
             <div class="card mx-auto mb-3" style="width: 20rem">
-            <h5 class="card-header bg-primary text-white">${name}<br /><br />Engineer ✍ <i class="fas fa-user-graduate"></i></h5>
+            <h5 class="card-header bg-primary text-white">${name}<br /><br /> ✍ Engineer <i class="fas fa-user-graduate"></i></h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
@@ -192,7 +183,7 @@ function addHTML(member) {
             const school = member.getSchool();
             data = `<div class="col-4">
             <div class="card mx-auto mb-3" style="width: 20rem">
-            <h5 class="card-header bg-primary text-white">${name}<br /><br />Intern 📚 <i class="fas fa-glasses"></i></h5>
+            <h5 class="card-header bg-primary text-white">${name}<br /><br /> 📚Intern  <i class="fas fa-glasses"></i></h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
@@ -204,7 +195,7 @@ function addHTML(member) {
             const officeNumber = member.officeNumber;
             data = `<div class="col-4">
             <div class="card mx-auto mb-3" style="width: 20rem">
-            <h5 class="card-header bg-primary text-white">${name}<br /><br />Manager ☕ </h5>
+            <h5 class="card-header bg-primary text-white">${name}<br /><br /> ☕ Manager </h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>

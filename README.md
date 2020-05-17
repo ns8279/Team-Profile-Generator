@@ -17,7 +17,7 @@
       npm init
 
   ## Usage
-  This app can be used to create a database of all the employee at your work place!
+  The application generates a Team profile data based on user input and displays it on the HTML page using Node.js.
    
   ## License
   This project is licensed under the MIT.
